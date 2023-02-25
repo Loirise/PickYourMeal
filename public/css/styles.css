@@ -1,0 +1,345 @@
+/* 
+!!! READ ME !!!
+JUMP BETWEEN SECTIONS BY SEARCHING FOR ||
+*/
+
+
+/* || BODY */
+body {
+    background-color: #e9dada !important;
+    padding: 0.5rem !important;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* || NAVBAR */
+.navbar {
+    background-color: #f8Abbd;
+    border-radius: 15px;
+}
+
+.nav-link {
+    color: black !important;
+    border-radius: 15px;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #ff7494;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
+}
+
+
+/* || FOOTER */
+#footer {
+    background-color: #f8Abbd;
+    border-radius: 15px;
+}
+
+
+/* || HOME PAGE */
+#pageTitle {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.2rem;
+    color: black;
+    text-decoration: none;
+
+}
+
+
+/* || HELP ME PAGE */
+.helpTxt {
+    margin: 0 5vw;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 5vh;
+}
+
+
+/* || PICK YOU MEAL PAGE - INGREDIENTS SECTION */
+.ingredients-group {
+    background-color: #e9dada;
+    width: 95%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 3px 4px gray;
+}
+
+.grouptitle {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 4px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+}
+
+.ingredient {
+    background-color: #f8Abbd;
+    flex: 0 !important;
+    border-radius: 8px !important;
+}
+
+.btn-check+.btn {
+    border: none;
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+.btn-check:hover+.btn {
+    background-color: #ff7494;
+    box-shadow: 1px 1px 1px gray;
+}
+
+.btn-check:checked+.btn {
+    border: none;
+    background-color: limegreen;
+}
+
+
+/* || PICK YOU MEAL PAGE - RECIPES SECTION */
+.recipes-group {
+    background-color: #e9dada;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px gray;
+}
+
+
+/* || OTHER */
+#ingredientGroups, #recipesSection, #allRecipes {
+    scrollbar-width: thin;
+    scrollbar-color: lightgray white;
+}
+
+#ingredientGroups::-webkit-scrollbar,#recipesSection::-webkit-scrollbar , #allRecipes::-webkit-scrollbar {
+    width: 12px;
+}
+
+#ingredientGroups::-webkit-scrollbar-track,#recipesSection::-webkit-scrollbar-track , #allRecipes::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 20px;
+}
+
+#ingredientGroups::-webkit-scrollbar-thumb,#recipesSection::-webkit-scrollbar-thumb , #allRecipes::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.small-section , .big-section {
+    background-color: #f8Abbd;
+    border-radius: 15px;
+    height: 79vh;
+}
+
+.xl-section {
+    width: 98vw;
+    background-color: #f8Abbd;
+    border-radius: 15px;
+    height: 79vh;
+}
+
+.small-section-title {
+    font-size: 24px;
+    padding: 8px 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.noBorder {
+    border: none;
+}
+
+.blueBtn, .blueBtnHome  {
+    font-family: 'Anton', sans-serif;
+    border: none;
+    border-radius: 16px;
+    color: black;
+    background-color: #BDE0FE;
+    transition: background-color 0.2s ease-in-out, color 0.25s, box-shadow 0.2s;
+}
+
+.blueBtn:hover, .blueBtnHome:hover {
+    background-color: #A2D2FF;
+    box-shadow: 1px 2px 3px gray;
+}
+
+.btn:first-child:active, .blueBtn:not(.btn-check)+.btn:active, .blueBtnHome:not(.btn-check)+.btn:active {
+    background-color: #73bbff;
+}
+
+.smallImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.bigImg {
+    width: auto;
+    height: 220px;
+}
+
+div .recipeBtn {
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+div .recipeBtn:hover {  /* ff7494  e7c6c6 */
+    background-color: #ff7494;
+    box-shadow: 4px 4px 8px gray;
+}
+
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+#pageTitle {
+    font-size: 50px;
+}
+
+.small-section {
+    height: 60vh;
+    width: 93vw;
+    margin: 12px 0px;
+}
+
+.big-section {
+    height: 65vh;
+    width: 93vw;
+    margin-bottom: 12px;
+}
+
+.helpTxt {
+    font-size: 20px;
+    line-height: 3vh;
+}
+#helpImg {
+    max-width: 250px;
+}
+.blueBtn {
+    padding: 16px;
+}
+.blueBtnHome{
+    padding: 16px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #pageTitle {
+        font-size: 55px;
+    }
+    .small-section {
+        height: 60vh;
+        width: 90vw;
+        margin: 12px 0px;
+    }
+    .big-section {
+        height: 70vh;
+        width: 90vw;
+    }
+    .helpTxt {
+        font-size: 24px;
+        line-height: 4vh;
+    }
+    #helpImg {
+        max-width: 350px;
+    }
+    .blueBtn {
+        padding: 20px;
+    }
+    .blueBtnHome{
+        padding: 24px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #pageTitle {
+        font-size: 60px;
+    }
+    .big-section {
+        height: 80vh;
+        width: 90vw;
+    }
+    .helpTxt {
+        font-size: 26px;
+        line-height: 5vh;
+    }
+    #helpImg {
+        max-width: 400px;
+    }
+    .blueBtn {
+        padding: 22px;
+    }
+    .blueBtnHome{
+        padding: 28px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #pageTitle {
+        font-size: 65px;
+    }
+    .small-section {
+        height: 79vh;
+        width: 26vw;
+        margin: 0px;
+    }
+    .big-section {
+        width: 72vw;
+        height: 79vh;
+    }
+    .helpTxt {
+        font-size: 28px;
+        line-height: 4vh;
+    }
+    #helpImg {
+        max-width: 300px;
+    }
+    .blueBtn {
+        padding: 26px;
+    }
+    .blueBtnHome{
+        padding: 28px 32px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #pageTitle {
+        font-size: 70px;
+    }
+    .helpTxt {
+        font-size: 28px;
+        line-height: 5vh;
+    }
+    #helpImg {
+        max-width: 350px;
+    }
+    .blueBtn {
+        padding: 28px 32px;
+    }
+    .blueBtnHome{
+        padding: 28px 36px;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    #pageTitle {
+        font-size: 75px;
+    }
+    .blueBtn {
+        padding: 30px 36px;
+    }
+    .blueBtnHome{
+        padding: 30px 40px;
+    }
+}
+
+
+
+

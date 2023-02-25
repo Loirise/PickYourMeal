@@ -1,0 +1,54 @@
+<section id="allRecipes" class="xl-section container-fluid overflow-auto">
+    <div class="row">
+
+        <% for(let recipe of allRecipes){ %>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex mx-auto my-1">
+                <button class="recipeBtn recipes-group d-block w-100 d-flex justify-content-between btn-dark noBorder p-0 m-0" data-bs-toggle="modal" data-bs-target="#<%= recipe.id %>">
+                    <div class="ms-3">
+                        <img src="<%= recipe.mealImg %>" class="smallImg img-fluid" alt="">
+                    </div>
+                    <h4 class="me-3 align-self-center"><%= recipe.title %></h4>
+                </button>
+            </div>
+
+            <div class="modal fade" id="<%= recipe.id %>" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title w-100 text-center"><b><%= recipe.title %></b></h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column flex-lg-row justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="<%= recipe.mealImg %>" class="img-fluid bigImg" alt="">
+                            </div>
+                            <div>
+                                <h5><b>Ingredients:</b></h5>
+                                <ul>
+                                    <% for(let [key, value] of Object.entries(recipe.ingredientServings)){ %>
+                                    <li>
+                                        <%= value %> <%= key %>
+                                    </li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                            <div class="w-50">
+                                <h5><b>Preparation:</b></h5>
+                                <ol>
+                                    <% for(let step of recipe.preparation){ %>
+                                    <li>
+                                        <%= step %>
+                                    </li>
+                                    <% } %>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+<section class="small-section d-flex flex-column align-items-center">
+    <h1 class="small-section-title text-center">Ingredients</h1>
+
+    <!-- INGREDIENTS GROUPS -->
+    <div id="ingredientGroups" class="d-flex flex-column align-items-center overflow-auto">
+        <% for(let name in ingrGroups){ %>
+            <div class="ingredients-group text-center">
+              <h4 class="grouptitle"><%= name %></h4>
+              <div class="btn-group flex-wrap" role="group">
+                <% for(let ingr of allIngredients){ %>
+                  <% if(ingr.group == name){ %>
+                    <div>
+                      <input type="checkbox" class="btn-check ingrCheckbox" id="<%= ingr.name %>" name="<%= ingr.name %>" value="<%= ingr.name %>" autocomplete="off">
+                      <label class="btn ingredient m-1" for="<%= ingr.name %>"><%= ingr.name %></label>
+                    </div>
+                  <% } %>
+                <% } %>
+              </div>
+            </div>
+          <% } %>
+    </div>
+    <br>
+</section>
