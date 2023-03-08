@@ -1,2 +1,15 @@
 # PickYourMeal
-First project - A site where you can choose a recipe from a list or choose what ingredients are available to you and see what recipes you can cook
+A site where you can choose a recipe from a list or choose what ingredients are available to you and see what recipes you can cook.
+
+
+## How to install
+* Install MongoDB if you don't have it already - check [MongoDB installation guide](https://www.mongodb.com/docs/manual/installation/)
+* Download the repo
+* Go to the downloaded folder, open the terminal and run the command:
+``` npm install ```
+* Seed the database using these scripts (check if the mongoose.connection path is correct)
+``` node seedsIngr.js ```
+``` node seedsRecipe.js ```
+* Finally run the index.js
+``` nodemon index.js ```
+* Enjoy
