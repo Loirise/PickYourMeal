@@ -59,6 +59,10 @@ body {
     line-height: 5vh;
 }
 
+#helpImg {
+    outline: 3px solid black;
+}
+
 
 /* || PICK YOU MEAL PAGE - INGREDIENTS SECTION */
 .ingredients-group {

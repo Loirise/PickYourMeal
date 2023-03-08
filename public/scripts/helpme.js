@@ -4,23 +4,17 @@ const img = document.querySelector('#helpImg');
 const btn1 = document.querySelector('#back');
 const btn2 = document.querySelector('#next');
 
-const textOne = "Lorem 1 dolor sit amet consectetur adipisicing elit. \
-Repudiandae, 1 provident vel praesentium voluptatem tenetur 1 temporibus \
-laudantium blanditiis itaque dolorem!";
-const textTwo = "Lorem 2 dolor sit amet consectetur adipisicing elit. \
-Repudiandae, 2 provident vel praesentium voluptatem tenetur 2 temporibus \
-laudantium blanditiis itaque dolorem!";
-const textThree = "Lorem 3 dolor sit amet consectetur adipisicing elit. \
-Repudiandae, 3 provident vel praesentium voluptatem tenetur 3 temporibus \
-laudantium blanditiis itaque dolorem!";
-const textFour = "Lorem 4 dolor sit amet consectetur adipisicing elit. \
-Repudiandae, 4 provident vel praesentium voluptatem tenetur 4 temporibus \
-laudantium blanditiis itaque dolorem!";
+const textOne = 'If you want to see all the available recipes, click "All Recipes" button on the top of the website. \
+            If you want to choose ingredients you have and let us pick for you, please continue by clicking "Next" button.';
+const textTwo = 'Navigate to PickYourMeal page either by selecting "Pick Your Meal" button on the navigation bar or by completing this short tutorial.';
+const textThree = 'Select any number of ingredients, beware you must select all of the ingredients of particular recipes  for that recipe to show up. \
+                    e.g. select "butter" and "chicken" for simple chicken recipe';
+const textFour = 'To view the recipe, simply click on one. Now lets get cookin!';
 
-const imgOne = "/public/images/help1.png";
-const imgTwo = "/public/images/help2.png";
-const imgThree = "/public/images/help3.png";
-const imgFour = "/public/images/help4.png";
+const imgOne = "./public/gifs/AllRecipesgif.gif";
+const imgTwo = "/public/gifs/PickYourOwngif.gif";
+const imgThree = "/public/gifs/ChoosingIngrsgif.gif";
+const imgFour = "/public/gifs/ShowRecipesgif.gif";
 
 
 btn2.addEventListener('click', (e) => {
