@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 const Ingredient = require('./models/ingredient');
 const Recipe = require('./models/recipe');
 
+const db = mongoose.connection;
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/pickYourMeal'
 mongoose.set('strictQuery', false);
 mongoose.connect(dbUrl)
