@@ -1,7 +1,11 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const Ingredient = require('./models/ingredient');
 
-mongoose.connect('mongodb://127.0.0.1:27017/pickYourMeal')
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/pickYourMeal'
+
+mongoose.connect(dbUrl)
     .then(() => {
         console.log('MONGO CONNECTION OPEN')
     })

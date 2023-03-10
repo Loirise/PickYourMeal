@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -7,8 +9,10 @@ const mongoose = require('mongoose');
 const Ingredient = require('./models/ingredient');
 const Recipe = require('./models/recipe');
 
-mongoose.connect('mongodb://127.0.0.1:27017/pickYourMeal')
-    .then(() => {
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/pickYourMeal'
+
+mongoose.connect()
+    .then((dbUrl) => {
         console.log('MONGO CONNECTION OPEN')
     })
     .catch(err => {
