@@ -10,15 +10,12 @@ const Ingredient = require('./models/ingredient');
 const Recipe = require('./models/recipe');
 
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/pickYourMeal'
-
-mongoose.connect()
-    .then((dbUrl) => {
-        console.log('MONGO CONNECTION OPEN')
-    })
-    .catch(err => {
-        console.log("ERROR!!! CONNECTION FAILED!!!")
-        console.log(err)
-    })
+mongoose.set('strictQuery', false);
+mongoose.connect(dbUrl)
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', () => {
+    console.log('Database connected');
+});
 
 app.set('view enginge', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
