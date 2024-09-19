@@ -8,8 +8,8 @@ A site where you can choose a recipe from a list or choose what ingredients are 
 * Go to the downloaded folder, open the terminal and run the command:
 * ``` npm install ```
 * Seed the database using these scripts **(check if the *mongoose.connection* path is correct)**
-* ``` node seedsIngr.js ```
-* ``` node seedsRecipe.js ```
+* ``` node populateIngr.js ```
+* ``` node populateRecipe.js ```
 * Finally run the index.js:
 * ``` nodemon index.js ```
 * Enjoy
